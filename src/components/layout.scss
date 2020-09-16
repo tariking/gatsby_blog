@@ -1,5 +1,31 @@
 @import "../styles/global.scss";
 
+header {
+  padding-bottom: 1em;
+}
+
+.postdate {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.posttitle {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.pagetitle {
+  margin-top: .5em;
+  margin-bottom: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border: none;
+}
+
+footer {
+  font-size: 0.8rem;
+  margin-top: 2rem;
+}
 
 .navbar {
   position: fixed;
@@ -45,9 +71,4 @@
       }
     }
   }
-}
-
-header.title {
-  font-size: 1.2rem;
-  font-weight: 600;
 }

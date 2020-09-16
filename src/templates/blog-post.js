@@ -1,11 +1,10 @@
 import React from "react"
-import _ from "lodash"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
 import Toc from "../components/toc"
 import Tag from "../components/tag"
 
@@ -22,24 +21,13 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       />
       <article itemScope itemType="http://schema.org/Article">
         <header>
+          <div className="postdate">{post.frontmatter.date}</div>
           <h1
             itemProp="headline"
-            style={{
-              marginTop: rhythm(1),
-              marginBottom: 0,
-            }}
+            className="posttitle"
           >
             {post.frontmatter.title}
           </h1>
-          <p
-            style={{
-              ...scale(-1 / 5),
-              display: `block`,
-              marginBottom: rhythm(1),
-            }}
-          >
-            {post.frontmatter.date}
-          </p>
           <Tag tags={post.frontmatter.tags} />
         </header>
         <Toc data={data.markdownRemark.tableOfContents} />
@@ -53,7 +41,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           }}
         />
         <footer>
-          <Bio />
+          {/* <Bio /> */}
         </footer>
       </article>
 
@@ -65,6 +53,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             justifyContent: `space-between`,
             listStyle: `none`,
             padding: 0,
+            marginLeft: 0,
           }}
         >
           <li>
@@ -103,7 +92,7 @@ export const pageQuery = graphql`
       tableOfContents
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY/MM/DD")
         description
         tags
       }

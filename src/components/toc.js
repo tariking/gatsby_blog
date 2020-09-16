@@ -4,7 +4,7 @@ const Toc = props => {
   if(props.data !== "" ) {
     return (
       <div className="toc">
-        <h4 className="toc__title">目次</h4>
+        <h5 className="toc__title">CONTENTS</h5>
         <div
           className="toc__content"
           dangerouslySetInnerHTML={{

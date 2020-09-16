@@ -9,17 +9,16 @@ import { rhythm } from "../utils/typography"
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
-  console.log('posts', posts)
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
-      <Bio />
+      {/* <Bio /> */}
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
           <article key={node.fields.slug}>
-            <header>
+            <header style={{paddingBottom: 0}}>
               <h3
                 style={{
                   marginBottom: rhythm(1 / 4),
@@ -32,9 +31,14 @@ const BlogIndex = ({ data, location }) => {
               <small>{node.frontmatter.date}</small>
             </header>
             <section>
-              <p
+              {/* <p
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.description || node.excerpt,
+                }}
+              /> */}
+              <p
+              dangerouslySetInnerHTML={{
+                  __html: node.excerpt,
                 }}
               />
             </section>

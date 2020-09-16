@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import { rhythm, scale } from "../utils/typography"
-//import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
+import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 
 import "./layout.scss"
 import NavBar from "../components/navbar"
@@ -17,25 +17,8 @@ const Layout = ({ location, title, children }) => {
         style={{
           ...scale(1.5),
           marginBottom: rhythm(1.5),
-          marginTop: 0,
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h3>
-    )
-  } else {
-    header = (
-      <h3
-        style={{
-          marginTop: 0,
+          marginTop: rhythm(0.5),
+          paddingTop: rhythm(1),
         }}
       >
         <Link
@@ -55,18 +38,20 @@ const Layout = ({ location, title, children }) => {
       style={{
         marginLeft: `auto`,
         marginRight: `auto`,
-        marginTop: rhythm(1),
+        marginTop: "50px",
         maxWidth: rhythm(24),
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+        paddingLeft: `${rhythm(3 / 4)}`,
+        paddingRight: `${rhythm(3 / 4)}`,
+        paddingTop: "0",
+        paddingBottom: `${rhythm(1.5)}`,
+        backgroundColor: "#fff",
       }}
     >
       <NavBar />
       <header>{header}</header>
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
+      © Copyright {new Date().getFullYear()} gg-box All rights reserved.
       </footer>
     </div>
   )
