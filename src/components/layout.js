@@ -2,6 +2,10 @@ import React from "react"
 import { Link } from "gatsby"
 
 import { rhythm, scale } from "../utils/typography"
+//import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
+
+import "./layout.scss"
+import NavBar from "../components/navbar"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -9,7 +13,7 @@ const Layout = ({ location, title, children }) => {
 
   if (location.pathname === rootPath) {
     header = (
-      <h1
+      <h3
         style={{
           ...scale(1.5),
           marginBottom: rhythm(1.5),
@@ -25,13 +29,12 @@ const Layout = ({ location, title, children }) => {
         >
           {title}
         </Link>
-      </h1>
+      </h3>
     )
   } else {
     header = (
       <h3
         style={{
-          fontFamily: `Montserrat, sans-serif`,
           marginTop: 0,
         }}
       >
@@ -52,10 +55,12 @@ const Layout = ({ location, title, children }) => {
       style={{
         marginLeft: `auto`,
         marginRight: `auto`,
+        marginTop: rhythm(1),
         maxWidth: rhythm(24),
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >
+      <NavBar />
       <header>{header}</header>
       <main>{children}</main>
       <footer>

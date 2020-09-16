@@ -1,0 +1,53 @@
+@import "../styles/global.scss";
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  height: 50px;
+  border-bottom: 1px solid #D6D6D6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 200;
+
+  &__ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+  }
+  &__li {
+    display: inline-block;
+    list-style: none;
+    line-height: 50px;
+    margin: 0 5px;
+
+    & a {
+      color: $link-color;
+      transition: all 0.5s ease;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 400;
+
+      &:hover {
+        opacity: 0.8;
+        transition: 0.5s;
+      }
+    }
+  }
+}
+
+header.title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}

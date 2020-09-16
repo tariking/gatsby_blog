@@ -45,6 +45,28 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
+          `gatsby-plugin-sass`,
+          {
+            resolve: `gatsby-remark-table-of-contents`,
+            options: {
+              exclude: "CONTENTS",
+              tight: false,
+              fromHeading: 1,
+              toHeading: 6,
+            }
+          },
+          `gatsby-remark-autolink-headers`,
+          `gatsby-remark-prismjs-title`,
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: true,
+              noInlineHighlight: false,
+            }
+          },
         ],
       },
     },
