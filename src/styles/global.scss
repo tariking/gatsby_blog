@@ -1,10 +1,12 @@
+$default-color: #202428;
+$bg-color: #f2f3f3;
 $link-color: #f76b8a;
 
 
 
 html {
-  background-color: #f2f3f3;
-  color: #202428;
+  background-color: $bg-color;
+  color: $default-color;
 }
 
 a {

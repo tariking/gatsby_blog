@@ -1,10 +1,10 @@
 ---
 title: New Beginnings
-date: "2015-05-01T22:12:03.284Z"
-description: "description"
+date: '2015-05-01T22:12:03.284Z'
+description: 'description'
 draft: true
-category: "Design Culture"
-tags: ["Gatsby", "test"]
+category: 'Design Culture'
+tags: ['Gatsby', 'test']
 ---
 
 Far far away, behind the word mountains, far from the countries Vokalia and

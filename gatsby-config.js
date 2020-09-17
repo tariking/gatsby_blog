@@ -48,23 +48,23 @@ module.exports = {
           {
             resolve: `gatsby-remark-table-of-contents`,
             options: {
-              exclude: "CONTENTS",
+              exclude: 'CONTENTS',
               tight: false,
               fromHeading: 1,
               toHeading: 4,
-            }
+            },
           },
           `gatsby-remark-autolink-headers`,
           `gatsby-remark-prismjs-title`,
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              classPrefix: "language-",
+              classPrefix: 'language-',
               inlineCodeMarker: null,
               aliases: {},
               showLineNumbers: false,
               noInlineHighlight: false,
-            }
+            },
           },
         ],
       },

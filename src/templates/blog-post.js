@@ -1,12 +1,12 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from 'react'
+import { Link, graphql } from 'gatsby'
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { scale } from "../utils/typography"
-import Toc from "../components/toc"
-import Tag from "../components/tag"
+import Bio from '../components/bio'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import { scale } from '../utils/typography'
+import Toc from '../components/toc'
+import Tag from '../components/tag'
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
@@ -22,10 +22,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <article itemScope itemType="http://schema.org/Article">
         <header>
           <div className="postdate">{post.frontmatter.date}</div>
-          <h1
-            itemProp="headline"
-            className="posttitle"
-          >
+          <h1 itemProp="headline" className="posttitle">
             {post.frontmatter.title}
           </h1>
           <Tag tags={post.frontmatter.tags} />
@@ -43,9 +40,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             marginBottom: rhythm(1),
           }}
         /> */}
-        <footer>
-          {/* <Bio /> */}
-        </footer>
+        <footer>{/* <Bio /> */}</footer>
       </article>
 
       <nav>

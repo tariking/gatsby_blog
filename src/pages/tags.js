@@ -1,36 +1,46 @@
-import React from "react"
+import React from 'react'
 // Utilities
-import kebabCase from "lodash/kebabCase"
+import kebabCase from 'lodash/kebabCase'
 // Components
-// import { Helmet } from "react-helmet"
-import { Link, graphql } from "gatsby"
-import LayoutPage from "../components/layout-page";
+import { Helmet } from 'react-helmet'
+import SEO from '../components/seo'
+import { Link, graphql } from 'gatsby'
+import LayoutPage from '../components/layout-page'
 
-const TagsPage = ({
-  data: {
-    allMarkdownRemark: { group },
-    site: {
-      siteMetadata: { title },
-    },
-  },
-}) => (
-  <div>
-    {/* <Helmet title={title} /> */}
-    <LayoutPage>
-      {/* <h1>{title}</h1> */}
-      <ul>
-        {group.map(tag => (
-          <li key={tag.fieldValue}>
-            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-              {tag.fieldValue} ({tag.totalCount})
-            </Link>
-          </li>
-        ))}
-      </ul>
+const TagsPage = ({ data, location }) => {
+  const siteTitle = data.site.siteMetadata.title
+  const author = data.site.siteMetadata.author.name
+  const group = data.allMarkdownRemark.group
+  //   {
+  //   data: {
+  //     allMarkdownRemark: { group },
+  //     site: {
+  //       siteMetadata: { title },
+  //     },
+  //   },
+  // }
+  //) => (
+  return (
+    <div>
+      <Helmet title={siteTitle} />
+      <LayoutPage location={location} title={siteTitle} author={author}>
+        <SEO title="TagList" />
+        <h1 itemProp="headline" className="pagetitle">
+          all tag list
+        </h1>
+        <ul>
+          {group.map(tag => (
+            <li key={tag.fieldValue}>
+              <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                {tag.fieldValue} ({tag.totalCount})
+              </Link>
+            </li>
+          ))}
+        </ul>
       </LayoutPage>
-  </div>
-)
-
+    </div>
+  )
+}
 
 export default TagsPage
 export const pageQuery = graphql`
@@ -38,9 +48,15 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        author {
+          name
+        }
       }
     }
-    allMarkdownRemark(limit: 2000) {
+    allMarkdownRemark(
+      limit: 2000
+      filter: { frontmatter: { draft: { eq: false } } }
+    ) {
       group(field: frontmatter___tags) {
         fieldValue
         totalCount

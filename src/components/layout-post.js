@@ -1,11 +1,11 @@
-import React from "react"
+import React from 'react'
 // import { Link } from "gatsby"
 
-import { rhythm, scale } from "../utils/typography"
+import { rhythm, scale } from '../utils/typography'
 //import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 
-import "./layout.scss"
-import NavBar from "./navbar"
+import './layout.scss'
+import NavBar from './navbar'
 
 const LayoutPost = ({ location, title, children }) => {
   // const rootPath = `${__PATH_PREFIX__}/`
@@ -23,7 +23,7 @@ const LayoutPost = ({ location, title, children }) => {
       {/* <header>{header}</header> */}
       <main>{children}</main>
       <footer>
-      © Copyright {new Date().getFullYear()} gg-box All rights reserved.
+        © Copyright {new Date().getFullYear()} gg-box All rights reserved.
       </footer>
     </div>
   )

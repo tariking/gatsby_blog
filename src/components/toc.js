@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
 const Toc = props => {
-  if(props.data !== "" ) {
+  if (props.data !== '') {
     return (
       <div className="toc">
         <h5 className="toc__title">CONTENTS</h5>
@@ -12,10 +12,10 @@ const Toc = props => {
           }}
         />
       </div>
-    );
+    )
   } else {
-    return ""
+    return ''
   }
-};
+}
 
-export default Toc;
+export default Toc

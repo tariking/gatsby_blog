@@ -1,11 +1,11 @@
-import React from "react"
-import _ from "lodash";
-import { Link, graphql } from "gatsby"
-import { rhythm, scale } from "../utils/typography"
+import React from 'react'
+import _ from 'lodash'
+import { Link, graphql } from 'gatsby'
+import { rhythm, scale } from '../utils/typography'
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Bio from '../components/bio'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -19,7 +19,7 @@ const BlogIndex = ({ data, location }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
           <article key={node.fields.slug}>
-            <header style={{paddingBottom: 0}}>
+            <header style={{ paddingBottom: 0 }}>
               <h4
                 style={{
                   marginBottom: rhythm(1 / 4),
@@ -32,16 +32,16 @@ const BlogIndex = ({ data, location }) => {
               <small>
                 {node.frontmatter.date}
                 {node.frontmatter.tags.map((tag, index) => {
-              return (
-                <Link
-                  to={`/tags/${_.kebabCase(tag)}/`}
-                  key={index}
-                  className="tag__listindex"
-                >
-                  {tag}
-                </Link>
-              );
-            })}
+                  return (
+                    <Link
+                      to={`/tags/${_.kebabCase(tag)}/`}
+                      key={index}
+                      className="tag__listindex"
+                    >
+                      {tag}
+                    </Link>
+                  )
+                })}
               </small>
             </header>
 
@@ -52,10 +52,10 @@ const BlogIndex = ({ data, location }) => {
                 }}
               /> */}
               <p
-              style={{
-                ...scale(-1 / 5),
-              }}
-              dangerouslySetInnerHTML={{
+                style={{
+                  ...scale(-1 / 5),
+                }}
+                dangerouslySetInnerHTML={{
                   __html: node.excerpt,
                 }}
               />
@@ -78,8 +78,8 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: {frontmatter: {draft: {eq: false}}}
-      ) {
+      filter: { frontmatter: { draft: { eq: false } } }
+    ) {
       edges {
         node {
           excerpt

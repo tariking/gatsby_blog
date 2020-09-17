@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "gatsby";
-import _ from "lodash";
+import React from 'react'
+import { Link } from 'gatsby'
+import _ from 'lodash'
 
 const Tag = props => {
   return (
@@ -14,10 +14,10 @@ const Tag = props => {
           >
             {tag}
           </Link>
-        );
+        )
       })}
     </div>
-  );
-};
+  )
+}
 
-export default Tag;
+export default Tag

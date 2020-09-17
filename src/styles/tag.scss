@@ -5,14 +5,14 @@
   flex-wrap: wrap;
 
   &__list {
-    padding-left: 0;
-    padding-right: 1em;
-    padding-top: .25em;
-    padding-bottom: .25m;
-    margin: 0;
-    text-decoration: none;
-    border-radius: 3px;
-    font-size: 0.8em;
+    display: flex;
+    align-items: center;
+    background-color: #eee;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    margin-top: 2px;
+    font-size: .8em;
   }
 
   &__listindex {
