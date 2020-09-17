@@ -4,7 +4,7 @@ import Image from "gatsby-image"
 
 import LayoutPage from "../components/layout-page";
 import SEO from "../components/seo";
-import { rhythm } from "../utils/typography"
+import { rhythm, scale } from "../utils/typography"
 
 const Aboutpage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
@@ -26,10 +26,16 @@ const Aboutpage = ({ data, location }) => {
         style={{
           marginRight: rhythm(1 / 2),
           marginBottom: 0,
-          minWidth: 250,
+          minWidth: 300,
         }}
       />
-        <div>ゆるい</div>
+        <div
+          style={{
+            ...scale(-1 / 5),
+          }}
+        >
+          Webフロント業界一年生。ゆるゆる。<br /><br />
+        </div>
       </LayoutPage>
     </div>
   );
@@ -49,7 +55,7 @@ export const pageQuery = graphql`
     }
     about: file(absolutePath: { regex: "/about.jpg/" }) {
       childImageSharp {
-        fixed(width: 250, height: 250) {
+        fixed(width: 300, height: 300) {
           ...GatsbyImageSharpFixed
         }
       }

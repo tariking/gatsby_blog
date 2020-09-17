@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
+import { scale } from "../utils/typography"
 import Toc from "../components/toc"
 import Tag from "../components/tag"
 
@@ -34,12 +34,15 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
+          style={{
+            ...scale(-1 / 5),
+          }}
         />
-        <hr
+        {/* <hr
           style={{
             marginBottom: rhythm(1),
           }}
-        />
+        /> */}
         <footer>
           {/* <Bio /> */}
         </footer>

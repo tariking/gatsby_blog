@@ -1,10 +1,11 @@
 import React from "react"
+import _ from "lodash";
 import { Link, graphql } from "gatsby"
+import { rhythm, scale } from "../utils/typography"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -12,14 +13,14 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
+      <SEO title={siteTitle} />
       {/* <Bio /> */}
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
           <article key={node.fields.slug}>
             <header style={{paddingBottom: 0}}>
-              <h3
+              <h4
                 style={{
                   marginBottom: rhythm(1 / 4),
                 }}
@@ -27,9 +28,23 @@ const BlogIndex = ({ data, location }) => {
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                   {title}
                 </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
+              </h4>
+              <small>
+                {node.frontmatter.date}
+                {node.frontmatter.tags.map((tag, index) => {
+              return (
+                <Link
+                  to={`/tags/${_.kebabCase(tag)}/`}
+                  key={index}
+                  className="tag__listindex"
+                >
+                  {tag}
+                </Link>
+              );
+            })}
+              </small>
             </header>
+
             <section>
               {/* <p
                 dangerouslySetInnerHTML={{
@@ -37,6 +52,9 @@ const BlogIndex = ({ data, location }) => {
                 }}
               /> */}
               <p
+              style={{
+                ...scale(-1 / 5),
+              }}
               dangerouslySetInnerHTML={{
                   __html: node.excerpt,
                 }}
@@ -58,7 +76,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: {frontmatter: {draft: {eq: false}}}
+      ) {
       edges {
         node {
           excerpt
@@ -69,6 +90,7 @@ export const pageQuery = graphql`
             date(formatString: "YYYY/MM/DD")
             title
             description
+            tags
           }
         }
       }

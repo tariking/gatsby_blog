@@ -1,7 +1,7 @@
 import React from "react";
 
 //import Layout from "../components/layout";
-import { rhythm } from "../utils/typography";
+import { rhythm, scale } from "../utils/typography";
 
 // Components
 import { Link, graphql } from "gatsby";
@@ -14,8 +14,16 @@ const Tags = ({ pageContext, data }) => {
 
   return (
     <LayoutPage>
-
-        <h4>{tagHeader}</h4>
+        <h4
+          style={{
+            ...scale(0),
+            marginBottom: rhythm(1.5),
+            marginTop: rhythm(0.5),
+            paddingTop: rhythm(1),
+          }}
+        >
+          {tagHeader}
+        </h4>
         {edges.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
           return (
@@ -28,7 +36,7 @@ const Tags = ({ pageContext, data }) => {
                 >
                   <Link
                     style={{ boxShadow: `none` }}
-                    to={node.frontmatter.slug}
+                    to={node.fields.slug}
                   >
                     {title}
                   </Link>
@@ -39,6 +47,9 @@ const Tags = ({ pageContext, data }) => {
                 <p
                   dangerouslySetInnerHTML={{
                     __html: node.frontmatter.description || node.excerpt,
+                  }}
+                  style={{
+                    ...scale(-1 / 5),
                   }}
                 />
               </section>
@@ -59,7 +70,7 @@ query($tag: String) {
   allMarkdownRemark(
     limit: 1000
     sort: { fields: [frontmatter___date], order: DESC }
-    filter: { frontmatter: { tags: { in: [$tag] } } }
+    filter: { frontmatter: { tags: { in: [$tag] }, draft: {eq: false} } }
   ) {
     totalCount
     edges {

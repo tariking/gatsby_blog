@@ -2,7 +2,7 @@
 title: index2
 date: "2015-05-01T22:12:03.284Z"
 description: "description"
-draft: false
+draft: true
 category: "Design Culture"
 tags: ["Gatsby", "test"]
 ---
