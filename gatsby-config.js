@@ -3,7 +3,7 @@ module.exports = {
     title: `gg-box Blog`,
     author: {
       name: `tariking`,
-      summary: `闇落ちしたエンジニア`,
+      summary: `闇落ちエンジニア`,
     },
     description: `技術系のメモまとめ`,
     siteUrl: `http://gg-box.com/`,
@@ -44,7 +44,6 @@ module.exports = {
           },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
-          `gatsby-plugin-sass`,
           {
             resolve: `gatsby-remark-table-of-contents`,
             options: {
@@ -97,6 +96,7 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    `gatsby-plugin-sass`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

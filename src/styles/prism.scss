@@ -1,4 +1,4 @@
-@import "./global.scss";
+@import './global.scss';
 
 .gatsby-code-title {
   background: #2e96b5;
@@ -16,7 +16,7 @@
 }
 
 pre[class*='language-'] {
-  background-color: #1c1b1b;
+  background-color: #353535;
   display: block;
   margin: 0 0 20px;
   padding-right: 1rem;
@@ -29,7 +29,7 @@ pre[class*='language-'] {
   color: #fff;
 }
 
-:not(pre)>code[class*='language-text'] {
+:not(pre) > code[class*='language-text'] {
   font-size: 1em;
   padding: 2px 10px 3px 12px;
   margin: 0 4px;
@@ -39,5 +39,5 @@ pre[class*='language-'] {
 
 .gatsby-highlight-code-line {
   background: #545454;
-  display: block
+  display: block;
 }
