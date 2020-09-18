@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `tariking Blog`,
+    title: `gg-box Blog`,
     author: {
       name: `tariking`,
       summary: `闇落ちしたエンジニア`,
@@ -81,13 +81,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `gg-box Blog`,
+        short_name: `gg-box`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/icon.png`,
       },
     },
     `gatsby-plugin-react-helmet`,

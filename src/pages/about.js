@@ -31,7 +31,12 @@ const Aboutpage = ({ data, location }) => {
             ...scale(-1 / 5),
           }}
         >
-          Webフロント業界一年生。ゆるゆる。
+          <br />
+          gg-box@tarikingの書く、忘れないための技術メモです。
+          <br />
+          Webフロント業界の人。業界内の尖った人は怖いなーとか思ってます。
+          <br />
+          やさしくしてください。
           <br />
           <br />
         </div>

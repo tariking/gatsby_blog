@@ -1,6 +1,13 @@
 import Typography from 'typography'
 import theme from 'typography-theme-github'
 
+theme.overrideThemeStyles = ({ rhythm }, options) => ({
+  'h2,h3,h4,h5': {
+    marginBottom: rhythm(1 / 2),
+    marginTop: rhythm(2),
+  },
+})
+
 theme.googleFonts = [
   {
     name: 'Noto+Sans+JP',

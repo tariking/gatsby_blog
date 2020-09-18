@@ -1,4 +1,4 @@
-@import "./global.scss";
+@import './global.scss';
 
 .tag {
   display: flex;
@@ -12,11 +12,12 @@
     border-radius: 4px;
     margin-bottom: 4px;
     margin-top: 2px;
-    font-size: .8em;
+    margin-right: 4px;
+    font-size: 0.8em;
   }
 
   &__listindex {
     font-size: 1em;
-    padding-left: .5rem;
+    padding-left: 0.5rem;
   }
 }

@@ -11,15 +11,7 @@ const TagsPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const author = data.site.siteMetadata.author.name
   const group = data.allMarkdownRemark.group
-  //   {
-  //   data: {
-  //     allMarkdownRemark: { group },
-  //     site: {
-  //       siteMetadata: { title },
-  //     },
-  //   },
-  // }
-  //) => (
+
   return (
     <div>
       <Helmet title={siteTitle} />

@@ -2,19 +2,19 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 
 import Bio from '../components/bio'
-import Layout from '../components/layout'
+import LayoutPost from '../components/layout-post'
 import SEO from '../components/seo'
 import { scale } from '../utils/typography'
-import Toc from '../components/toc'
 import Tag from '../components/tag'
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
+  const toc = data.markdownRemark.tableOfContents
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <LayoutPost location={location} title={siteTitle} toc={toc}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -27,7 +27,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </h1>
           <Tag tags={post.frontmatter.tags} />
         </header>
-        <Toc data={data.markdownRemark.tableOfContents} />
+        {/* <Toc data={data.markdownRemark.tableOfContents} /> */}
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
@@ -70,7 +70,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </li>
         </ul>
       </nav>
-    </Layout>
+    </LayoutPost>
   )
 }
 

@@ -1,7 +1,16 @@
+@import './global.scss';
+
+.right-toc {
+  height: 80%;
+}
+
 .toc {
   background-color: #f2f2f2;
-  padding: 1em;
-  margin-bottom: 1em;
+  padding-top: 50px;
+  position: sticky;
+  position: -webkit-sticky;
+  overflow-y: auto;
+  top: 20px;
 
   &__title {
     margin: 0;
@@ -9,15 +18,16 @@
   }
   &__content {
     & ul {
-      margin-left: 30px;
+      margin-left: 0;
 
-  & li {
-        font-size: 0.9em;
-        margin: 10px 0;
+      & li {
+        font-size: 0.8em;
+        margin: 4px 0;
+        list-style-type: none;
 
         & a {
           box-shadow: none;
-          color: black;
+          color: $default-color;
         }
       }
     }

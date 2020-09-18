@@ -1,7 +1,25 @@
-@import "../styles/global.scss";
+@import '../styles/global.scss';
 
 header {
   padding-bottom: 1em;
+}
+
+@media screen and (min-width: 960px) {
+  .flexbox {
+    -webkit-display: flex;
+    display: flex;
+  }
+  .main {
+    margin: 0 16px 0 0;
+    -webkit-flex: 7;
+    flex: 7;
+  }
+  .side {
+    -webkit-flex: 1;
+    flex: 1;
+    min-width: 0;
+    max-width: 150px;
+  }
 }
 
 .postdate {
@@ -16,7 +34,7 @@ header {
 }
 
 .pagetitle {
-  margin-top: .5em;
+  margin-top: 0.5em;
   margin-bottom: 0;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -24,7 +42,7 @@ header {
 }
 
 footer {
-  text-align:center;
+  text-align: center;
   font-size: 0.8rem;
   margin-top: 2rem;
 }
@@ -36,7 +54,7 @@ footer {
   right: 0;
   background: white;
   height: 50px;
-  border-bottom: 1px solid #D6D6D6;
+  border-bottom: 1px solid #d6d6d6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

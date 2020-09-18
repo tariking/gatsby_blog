@@ -8,7 +8,7 @@ const Toc = props => {
         <div
           className="toc__content"
           dangerouslySetInnerHTML={{
-            __html: props.data,
+            __html: props.toc,
           }}
         />
       </div>
