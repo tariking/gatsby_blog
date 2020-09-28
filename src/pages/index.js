@@ -1,11 +1,11 @@
 import React from 'react'
-import _ from 'lodash'
 import { Link, graphql } from 'gatsby'
 import { rhythm, scale } from '../utils/typography'
 
-import Bio from '../components/bio'
+// import Bio from '../components/bio'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import Tag from '../components/tag'
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -31,17 +31,7 @@ const BlogIndex = ({ data, location }) => {
               </h4>
               <small>
                 {node.frontmatter.date}
-                {node.frontmatter.tags.map((tag, index) => {
-                  return (
-                    <Link
-                      to={`/tags/${_.kebabCase(tag)}/`}
-                      key={index}
-                      className="tag__listindex"
-                    >
-                      {tag}
-                    </Link>
-                  )
-                })}
+                <Tag tags={node.frontmatter.tags} index={true} />
               </small>
             </header>
 

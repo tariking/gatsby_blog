@@ -18,7 +18,7 @@ header {
     -webkit-flex: 1;
     flex: 1;
     min-width: 0;
-    max-width: 150px;
+    max-width: 160px;
   }
 }
 
@@ -49,6 +49,17 @@ footer {
   margin-top: 2rem;
 }
 
+.ggbimg {
+  animation: App-logo-spin 20s linear infinite;
+  opacity: 0.7;
+  height: 32px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 0.5em;
+  pointer-events: none;
+  vertical-align: middle;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -64,6 +75,20 @@ footer {
   justify-content: space-between;
   padding: 0 20px;
   z-index: 200;
+
+  &__title {
+    display: block;
+  }
+
+  &__img {
+    display: inline-block;
+    line-height: 50px;
+  }
+
+  &__titletext {
+    display: inline-block;
+    line-height: 50px;
+  }
 
   &__ul {
     display: block;

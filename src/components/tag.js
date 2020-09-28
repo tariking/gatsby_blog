@@ -1,17 +1,23 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import _ from 'lodash'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faTag } from '@fortawesome/free-solid-svg-icons'
 
 const Tag = props => {
+  library.add(faTag)
+
   return (
-    <div className="tag">
+    <div className={props.index ? 'tag-index' : 'tag'}>
       {props.tags.map((tag, index) => {
         return (
           <Link
             to={`/tags/${_.kebabCase(tag)}/`}
             key={index}
-            className="tag__list"
+            className={props.index ? 'tag__listindex' : 'tag__list'}
           >
+            <FontAwesomeIcon icon={faTag} />
             {tag}
           </Link>
         )

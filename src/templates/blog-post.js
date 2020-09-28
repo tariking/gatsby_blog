@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 
-import Bio from '../components/bio'
+// import Bio from '../components/bio'
 import LayoutPost from '../components/layout-post'
 import SEO from '../components/seo'
 import { scale } from '../utils/typography'
@@ -27,7 +27,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </h1>
           <Tag tags={post.frontmatter.tags} />
         </header>
-        {/* <Toc data={data.markdownRemark.tableOfContents} /> */}
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"

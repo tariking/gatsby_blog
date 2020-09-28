@@ -1,5 +1,9 @@
 @import './global.scss';
 
+.tag-index {
+  display: inline-block;
+}
+
 .tag {
   display: flex;
   flex-wrap: wrap;
@@ -7,7 +11,6 @@
   &__list {
     display: flex;
     align-items: center;
-    background-color: #eee;
     padding: 4px 8px;
     border-radius: 4px;
     margin-bottom: 4px;
