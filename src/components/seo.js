@@ -16,7 +16,6 @@ const SEO = ({ description, lang, meta, title }) => {
       query SEO {
         site {
           buildTime(formatString: "YYYY/MM/DD")
-          pathPrefix
           siteMetadata {
             defaultTitle: title
             titleAlt
