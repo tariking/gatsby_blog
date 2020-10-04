@@ -13,22 +13,11 @@ import { useStaticQuery, graphql } from 'gatsby'
 const SEO = ({ description, lang, meta, title }) => {
   const { site } = useStaticQuery(
     graphql`
-      query SEO {
+      query {
         site {
-          buildTime(formatString: "YYYY/MM/DD")
           siteMetadata {
-            defaultTitle: title
-            titleAlt
-            shortName
-            author {
-              name
-              summary
-            }
-            siteLanguage
-            logo
-            siteUrl: url
-            defaultDescription: description
-            defaultBanner: banner
+            title
+            description
             social {
               twitter
             }
