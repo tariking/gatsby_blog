@@ -1,14 +1,24 @@
 module.exports = {
   siteMetadata: {
+    pathPrefix: '/',
     title: `gg-box Blog`,
+    titleAlt: 'gg-box Blog', // JSONLDのためのタイトル
+    shortName: 'gg-box Blog', // サイトの略称、12文字以下
     author: {
       name: `tariking`,
-      summary: `闇落ちエンジニア`,
+      summary: `フリーランスのフロントエンジニア`,
     },
-    description: `技術系のメモまとめ`,
-    siteUrl: `http://gg-box.com/`,
+    logo: 'content/assets/gg-box.png',
+    banner: 'content/assets/gg-box.png',
+    favicon: 'content/assets/gg-box.png', // ファビコン
+    description: `Webフロントエンジニアが技術的に困ったことを解決するブログ`,
+    url: 'http://gg-box.com', // スラッシュなしのサイトURL
+    siteURL: 'http://gg-box.com/', // スラッシュありのサイトURL
+    siteLanguage: 'ja', // HTMLの言語（ここでは日本語）
+    themeColor: '#ff6588',
+    backgroundColor: '#ffffff',
     social: {
-      twitter: `gg-box10`,
+      twitter: `@gg-box10`,
     },
   },
   plugins: [
@@ -110,6 +120,7 @@ module.exports = {
         ],
       },
     },
+    'gatsby-plugin-sitemap',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -117,9 +128,9 @@ module.exports = {
         short_name: `gg-box`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#ff6588`,
         display: `minimal-ui`,
-        icon: `content/assets/icon.png`,
+        icon: `content/assets/gg-box.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -132,6 +143,6 @@ module.exports = {
     `gatsby-plugin-sass`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }
