@@ -12,8 +12,7 @@ module.exports = {
     banner: 'content/assets/gg-box.png',
     favicon: 'content/assets/gg-box.png', // ファビコン
     description: `Webフロントエンジニアが技術的に困ったことを解決するブログ`,
-    url: 'http://gg-box.com', // スラッシュなしのサイトURL
-    siteURL: 'http://gg-box.com/', // スラッシュありのサイトURL
+    siteUrl: 'http://gg-box.com/',
     siteLanguage: 'ja', // HTMLの言語（ここでは日本語）
     themeColor: '#ff6588',
     backgroundColor: '#ffffff',
