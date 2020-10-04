@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Toc = props => {
-  if (props.data !== undefined) {
+  if (props.data !== '') {
     return (
       <div className="toc">
         <h5 className="toc__title">CONTENTS</h5>
