@@ -8,6 +8,7 @@ header {
   .flexbox {
     -webkit-display: flex;
     display: flex;
+    flex-wrap: nowrap;
   }
   .main {
     margin: 0 16px 0 0;
@@ -19,6 +20,22 @@ header {
     flex: 1;
     min-width: 0;
     max-width: 160px;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .flexbox {
+    -webkit-display: flex;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .main {
+    margin: 0 16px 0 0;
+    -webkit-flex: 10;
+    flex: 10;
+  }
+  .side {
+    display: none;
   }
 }
 
