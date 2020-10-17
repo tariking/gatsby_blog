@@ -6,6 +6,20 @@ theme.overrideThemeStyles = ({ rhythm }, options) => ({
     marginBottom: rhythm(1 / 2),
     marginTop: rhythm(2),
   },
+  a: {
+    color: 'var(--textLink)',
+  },
+  // gatsby-remark-autolink-headers - don't underline when hidden
+  'a.anchor': {
+    boxShadow: 'none',
+  },
+  // gatsby-remark-autolink-headers - use theme colours for the link icon
+  'a.anchor svg[aria-hidden="true"]': {
+    stroke: 'var(--textLink)',
+  },
+  hr: {
+    background: 'var(--hr)',
+  },
 })
 
 theme.googleFonts = [
