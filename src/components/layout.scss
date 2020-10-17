@@ -4,7 +4,7 @@ header {
   padding-bottom: 1em;
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1025px) {
   .flexbox {
     -webkit-display: flex;
     display: flex;
@@ -12,6 +12,7 @@ header {
   }
   .main {
     margin: 0 16px 0 0;
+    min-width: 780px;
     -webkit-flex: 7;
     flex: 7;
   }
@@ -23,7 +24,7 @@ header {
   }
 }
 
-@media screen and (max-width: 959px) {
+@media screen and (max-width: 600px) {
   .flexbox {
     -webkit-display: flex;
     display: flex;
