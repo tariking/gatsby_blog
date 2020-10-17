@@ -32,13 +32,14 @@ const Aboutpage = ({ data, location }) => {
           }}
         >
           <br />
-          gg-box@tarikingの書く、忘れないための技術メモです。
+          gg-box->tarikingの書く、忘れないための技術メモです。
           <br />
           Webフロント業界の人。業界内の尖った人は怖いなーとか思ってます。
           <br />
           やさしくしてください。
           <br />
           <br />
+          お問い合わせはこちらから(s45.rita★gmail.com)
         </div>
       </LayoutPage>
     </div>
