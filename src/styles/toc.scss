@@ -5,7 +5,7 @@
 }
 
 .toc {
-  background-color: #f2f2f2;
+  background-color: transparent;
   padding-top: 50px;
   position: sticky;
   position: -webkit-sticky;
@@ -13,6 +13,7 @@
   top: 20px;
 
   &__title {
+    color: var(--textNormal);
     margin: 0;
     margin-bottom: 10px;
   }
@@ -27,7 +28,7 @@
 
         & a {
           box-shadow: none;
-          color: $default-color;
+          color: var(--textNormal);
         }
       }
     }

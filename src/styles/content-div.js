@@ -1,7 +1,7 @@
 import { rhythm } from '../utils/typography'
 
 export const contentStyle = {
-  backgroundColor: 'var(--bg)',
+  backgroundColor: 'var(--navHead)',
   color: 'var(--textNormal)',
   transition: 'color 0.2s ease-out, background 0.2s ease-out',
   marginLeft: `auto`,
@@ -15,6 +15,8 @@ export const contentStyle = {
 }
 
 export const postContentStyle = {
+  backgroundColor: 'var(--navHead)',
+  color: 'var(--textNormal)',
   marginLeft: `auto`,
   //marginRight: `auto`,
   marginTop: '50px',
@@ -23,5 +25,10 @@ export const postContentStyle = {
   paddingRight: `${rhythm(3 / 4)}`,
   paddingTop: '0',
   paddingBottom: `${rhythm(1.5)}`,
-  backgroundColor: '#fff',
+}
+
+export const postContentSideStyle = {
+  backgroundColor: 'var(--bg)',
+  marginRight: `auto`,
+  marginTop: '50px',
 }

@@ -7,7 +7,7 @@ import './layout.scss'
 import NavBar from './navbar'
 import Toc from './toc'
 import Footer from './footer'
-import { postContentStyle } from '../styles/content-div'
+import { postContentStyle, postContentSideStyle } from '../styles/content-div'
 
 const LayoutPost = ({ location, title, toc, children }) => {
   return (
@@ -17,13 +17,7 @@ const LayoutPost = ({ location, title, toc, children }) => {
         <main>{children}</main>
         <Footer />
       </div>
-      <div
-        className="side"
-        style={{
-          marginRight: `auto`,
-          marginTop: '50px',
-        }}
-      >
+      <div className="side" style={postContentSideStyle}>
         <aside className="right-toc">
           <Toc toc={toc} />
         </aside>
