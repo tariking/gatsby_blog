@@ -166,5 +166,5 @@ Pin と marker の名前が、ネット上で探すとごっちゃになって�
 
 ## 参考
 
-- [Maps JavaScript API の Geometry Library](https://developers.google.com/maps/documentation/javascript/reference/geometry)
+- [GoogleMap API 向きの計算](https://developers.google.com/maps/documentation/javascript/reference/geometry#spherical.computeHeading)
 - [transform-origin](https://developer.mozilla.org/ja/docs/Web/CSS/transform-origin)
