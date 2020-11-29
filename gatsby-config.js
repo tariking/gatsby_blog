@@ -10,7 +10,7 @@ module.exports = {
     },
     logo: 'content/assets/gg-box.png',
     banner: 'content/assets/gg-box.png',
-    favicon: 'content/assets/gg-box.png', // ファビコン
+    favicon: 'content/assets/favicons/gg-box.png', // ファビコン
     description: `Webフロントエンジニアが技術的に困ったことを解決するブログ`,
     siteUrl: 'http://gg-box.com/',
     siteLanguage: 'ja', // HTMLの言語（ここでは日本語）
@@ -130,7 +130,14 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#ff6588`,
         display: `minimal-ui`,
-        icon: `content/assets/gg-box.png`,
+        icon: `content/assets/favicons/gg-box.png`,
+        icons: [
+          {
+            src: `content/assets/favicons/gg-box180.png`,
+            sizes: `180x180`,
+            type: `image/png`,
+          },
+        ],
       },
     },
     `gatsby-plugin-react-helmet`,

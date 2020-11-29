@@ -31,15 +31,33 @@ const Aboutpage = ({ data, location }) => {
             ...scale(-1 / 5),
           }}
         >
-          <br />
-          gg-box->tarikingの書く、忘れないための技術メモです。
-          <br />
-          Webフロント業界の人。業界内の尖った人は怖いなーとか思ってます。
-          <br />
-          やさしくしてください。
-          <br />
-          <br />
-          お問い合わせはこちらから(s45.rita★gmail.com)
+          <div style={{ paddingTop: 20 }}>
+            gg-boxの書く、忘れないための技術メモです。
+            <br />
+            Webフロント業界の人。業界内の尖った人は怖いなーとか思ってます。
+            <br />
+            やさしくしてください。
+            <br />
+            <br />
+            お問い合わせはこちらから(s45.rita★gmail.com)
+          </div>
+          <div style={{ paddingTop: 20 }}>
+            <h3>作ったものリスト</h3>
+            <div>
+              <a href="https://color-changer.gg-box.com/">
+                アイコンの色違いつくるよ！
+              </a>
+            </div>
+            自分用アイコンの色違い作成のためのもの。
+            <br />
+            色違いって可愛いよね！（色違いで同じ服を買うタイプです）
+            <br />
+            Youtubeチャンネル、Twitterで使うアイコンのいい感じの色合いが決まらなくて、
+            <br />
+            移動中とか寝る前とかに、リッチなアプリを使わずにいじれるようにしたもの。
+            <br />
+            プログラムっていうか、イラスト書くのに時間かかった（　＾ω＾）・・・
+          </div>
         </div>
       </LayoutPage>
     </div>
