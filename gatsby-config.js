@@ -133,7 +133,7 @@ module.exports = {
         icon: `content/assets/gg-box.png`,
         icons: [
           {
-            src: `content/assets/gg-box180.png`,
+            src: `/favicons/gg-box180.png`,
             sizes: `180x180`,
             type: `image/png`,
           },
