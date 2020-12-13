@@ -68,8 +68,12 @@ Site settings → ドメイン名の右側にあるプダウン：Goto DNS Panel
 今まで使っていたホスティングサービスは契約終了しましょう。
 ここを忘れると、あとでかなりかなりがっかりします。
 
+## もしサービスが肥大化した場合の Netlify 料金まとめ
+
+[Netlify の無料枠と料金に関してのまとめ](https://www.suzu6.net/posts/92-netlify-monthly/)
+
 ## 参考
 
-[Netlify で独自ドメインを設定する](https://www.ravness.com/posts/netlifydomain)
-[Gatsby と Netlify で簡単にブログを作成](https://qiita.com/k-penguin-sato/items/7554e5e7e90aa10ae225)
-[Netlify を使って、Gatsby.js ブログを独自ドメインで公開する手順](https://0forest.com/gatsby-netlify/)
+- [Netlify で独自ドメインを設定する](https://www.ravness.com/posts/netlifydomain)
+- [Gatsby と Netlify で簡単にブログを作成](https://qiita.com/k-penguin-sato/items/7554e5e7e90aa10ae225)
+- [Netlify を使って、Gatsby.js ブログを独自ドメインで公開する手順](https://0forest.com/gatsby-netlify/)

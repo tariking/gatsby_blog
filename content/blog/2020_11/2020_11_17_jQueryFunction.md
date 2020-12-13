@@ -55,4 +55,4 @@ $(function() {
 
 ## 参考
 
-[jQuery Api Doc #ready-handler](https://api.jquery.com/ready/#ready-handler)
+- [jQuery Api Doc #ready-handler](https://api.jquery.com/ready/#ready-handler)
