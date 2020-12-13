@@ -95,13 +95,13 @@ export default AnyReactComponent;
 
 透明化した以下のようなアイコンを準備しました。(100px\*100px)
 
-![軌跡チェック用に使ったアイコン](../assets/ReactGoogleMap/tester.png)
+![軌跡チェック用に使ったアイコン](./ReactGoogleMap/tester.png)
 
 ### マーカーの移動
 
 - マーカーの位置指定なしで動かした場合。マーカーの左上が支点になっているのがわかる。
 
-![指定なし](../assets/ReactGoogleMap/none.png)
+![指定なし](./ReactGoogleMap/none.png)
 
 - マーカーの中心を移動軌跡に合わせたい場合は、画像ファイルの中心に位置を指定するといい。
 
@@ -111,7 +111,7 @@ export default AnyReactComponent;
     }}>
 ```
 
-![中心位置で移動](../assets/ReactGoogleMap/translate.png)
+![中心位置で移動](./ReactGoogleMap/translate.png)
 
 ### マーカーの移動に回転を追加
 
@@ -123,7 +123,7 @@ export default AnyReactComponent;
     }}>
 ```
 
-![回転追加](../assets/ReactGoogleMap/add_rotate.png)
+![回転追加](./ReactGoogleMap/add_rotate.png)
 
 - 回転中心がわからないのかな？というわけで、デフォルトであり、上で指定した画像の中央位置を指定してみた。
   ずーれーてーるー！！ぴえん。
@@ -135,7 +135,7 @@ export default AnyReactComponent;
     }}>
 ```
 
-![中央指定](../assets/ReactGoogleMap/center.png)
+![中央指定](./ReactGoogleMap/center.png)
 
 - アンカーの位置が間違ってると思うので、それでは本来 GoogleMap の支点になっているマーカーの左上位置を transform-origin にしてみた。普通に見えるようになりました。やったね！！
 
@@ -146,7 +146,7 @@ export default AnyReactComponent;
     }}>
 ```
 
-![中央指定](../assets/ReactGoogleMap/top_left.png)
+![中央指定](./ReactGoogleMap/top_left.png)
 
 この後いろいろ試したら、marker アイコンの上部位置ならどこでも思った通りの回転をするようでした。
 要するに、

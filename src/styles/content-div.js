@@ -7,7 +7,7 @@ export const contentStyle = {
   marginLeft: `auto`,
   marginRight: `auto`,
   marginTop: '50px',
-  maxWidth: rhythm(26),
+  maxWidth: rhythm(30),
   paddingLeft: `${rhythm(3 / 4)}`,
   paddingRight: `${rhythm(3 / 4)}`,
   paddingTop: '0',
