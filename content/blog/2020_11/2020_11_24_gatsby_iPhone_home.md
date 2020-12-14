@@ -10,7 +10,9 @@ tags: ['Gatsby', 'favicon', 'iPhone']
 gatsby-plugin-manifest に icons を追加して、
 iPhone の「ホーム画面に追加」に対応します。
 
-ここでは、iPhone8 と、iPhone7Plus で動作確認するので、アイコンは 180px x 180px のものを用意します。
+gatsby-plugin-manifest に設定する方法と、react-helmet で<header>に設定する方法があるが、ここでは gatsby-plugin-manifest に追記する方法で。
+
+ここでは、iPhone8 と、iPhone7Plus で動作確認するので(手持ちの iPhone)、アイコンは 180px x 180px のものを用意します。
 背景が透明のものを使用すると、黒い四角がホーム画面に出てしまうので、背景色は何かしら設定しておきます。
 
 基本的なことは[gatsby-plugin-manifest](https://www.gatsbyjs.com/plugins/gatsby-plugin-manifest/)を読む。
