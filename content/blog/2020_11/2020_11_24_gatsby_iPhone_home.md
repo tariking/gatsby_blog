@@ -4,20 +4,27 @@ date: '2020-11-24'
 description: 'Gatsby.jsにiPhoneホーム画面アイコンを設定する'
 draft: false
 category: 'Gatsby'
-tags: ['Gatsby', 'favicon', 'iPhone']
+tags: ['Gatsby', 'favicon', 'iPhone', 'manifest']
 ---
 
-gatsby-plugin-manifest に icons を追加して、
-iPhone の「ホーム画面に追加」に対応します。
+gatsby-plugin-manifest に icons を追加して、iPhone の「ホーム画面に追加」に対応します。
 
-gatsby-plugin-manifest に設定する方法と、react-helmet で<header>に設定する方法があるが、ここでは gatsby-plugin-manifest に追記する方法で。
+単に iPhone の「ホーム画面に追加」するだけなら
 
-ここでは、iPhone8 と、iPhone7Plus で動作確認するので(手持ちの iPhone)、アイコンは 180px x 180px のものを用意します。
-背景が透明のものを使用すると、黒い四角がホーム画面に出てしまうので、背景色は何かしら設定しておきます。
+- gatsby-plugin-manifest に設定する方法
+- react-helmet で`<header></header>`に設定する方法（単に HTML で出す）
 
-基本的なことは[gatsby-plugin-manifest](https://www.gatsbyjs.com/plugins/gatsby-plugin-manifest/)を読む。
+の二種類があります。
+Gatsby.js が PWA（プログレッシブウェブアプリ）に対応しているので、どうせなら、くらいの感じで gatsby-plugin-manifest に追記する方法で対応します。
+
+## 準備
+
+iPhone で動作確認するので、アイコンは 180px x 180px のものを用意します。
+背景が透明のものを使用すると、アイコンは黒い四角になってしまうので、背景色は何かしら設定しておきます。
 
 ## gatsby-plugin-manifest に追記する
+
+[gatsby-plugin-manifest](https://www.gatsbyjs.com/plugins/gatsby-plugin-manifest/)を見つつ。
 
 ```javascript{12-18}:title=gatsby-config.js
 ...
@@ -51,8 +58,27 @@ static 以下に置かないと読んでくれないので、なければ作っ�
 static\favicons\gg-box180.png
 ```
 
+## ビルドして Manifest を確認する
+
+一旦ビルドしないと Manifest は作成されないので、ビルドしたら
+
+Chrome の場合:　 Application 　 → 　 Manifest
+
+で中身を確認します。
+
+![Manifest](./gatsbyIcon/icons.png)
+
+## 更新もしくは削除について
+
+一旦 static で設置されたアイコンはブラウザローカルでキャッシュされるので（PWA だから。本番環境のみ）
+更新したいときは明示的に削除する必要があります。
+ちなみに一旦ブラウザにキャッシュされたら、そのブラウザで削除しないと消えません。
+
+というわけで、削除方法はそのうち。
+
 ## 参考
 
+- [Add a web app manifest](https://web.dev/add-manifest/)
 - [gatsby-plugin-manifest](https://www.gatsbyjs.com/plugins/gatsby-plugin-manifest/)
 - [様々なファビコンを一括生成。favicon generator](https://ao-system.net/favicongenerator/)
 - [gatsby の gatsby-plugin-manifest プラグインを使って webmanifest を自動生成する](https://qiita.com/github0013@github/items/90fd3f03c678ba36f016)
