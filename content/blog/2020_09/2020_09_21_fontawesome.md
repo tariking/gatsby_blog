@@ -1,9 +1,8 @@
 ---
 title: 'GatsbyでFont Awesomeを使いたい'
-date: '2020-09-21'
-description: 'GatsbyでFont Awesomeを使いたい'
+published: '2020-09-21T15:00+09:00'
+updated: '2020-09-21T15:00+09:00'
 draft: false
-category: 'Gatsby'
 tags: ['Gatsby', 'Font Awesome']
 ---
 

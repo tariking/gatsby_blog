@@ -1,9 +1,8 @@
 ---
 title: 'ムームードメインで取得した独自ドメインで、Gatsby.jsブログをNetlifyで公開する'
-date: '2020-11-20'
-description: 'ムームードメインで取得した独自ドメインで、Gatsby.jsブログをNetlifyで公開する'
+published: '2020-11-20T15:00+09:00'
+updated: '2020-11-20T15:00+09:00'
 draft: false
-category: 'Gatsby'
 tags: ['Gatsby', 'Netlify', '独自ドメイン', 'ホスティング']
 ---
 

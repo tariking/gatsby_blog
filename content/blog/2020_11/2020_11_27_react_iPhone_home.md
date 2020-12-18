@@ -1,9 +1,8 @@
 ---
 title: 'Create react app を使って作ったプロジェクトにファビコンとホーム画面追加を設定する'
-date: '2020-11-27'
-description: 'Create react app を使って作ったプロジェクトにファビコンとホーム画面追加を設定する'
+published: '2020-11-27T15:00+09:00'
+updated: '2020-11-27T15:00+09:00'
 draft: false
-category: 'react'
 tags: ['react', 'favicon', 'iPhone']
 ---
 

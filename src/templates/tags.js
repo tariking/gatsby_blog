@@ -38,7 +38,7 @@ const Tags = ({ pageContext, data }) => {
                   {title}
                 </Link>
               </h3>
-              <small>{node.frontmatter.date}</small>
+              <small>{node.frontmatter.published}</small>
             </header>
             <section>
               <p
@@ -66,7 +66,7 @@ export const pageQuery = graphql`
   query($tag: String) {
     allMarkdownRemark(
       limit: 1000
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { fields: [frontmatter___published], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] }, draft: { eq: false } } }
     ) {
       totalCount
@@ -78,7 +78,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            date
+            published
             tags
           }
         }

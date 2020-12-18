@@ -1,9 +1,8 @@
 ---
 title: 'Netlifyでサブドメインを設定する'
-date: '2020-11-22'
-description: 'Netlifyでサブドメインを設定する'
+published: '2020-11-22T15:00+09:00'
+updated: '2020-11-22T15:00+09:00'
 draft: false
-category: 'Netlify'
 tags: ['Netlify', 'subdomain']
 ---
 

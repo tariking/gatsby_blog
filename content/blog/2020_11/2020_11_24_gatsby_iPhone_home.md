@@ -1,9 +1,8 @@
 ---
 title: 'Gatsby.jsにiPhoneホーム画面アイコンを設定する'
-date: '2020-11-24'
-description: 'Gatsby.jsにiPhoneホーム画面アイコンを設定する'
+published: '2020-11-24T15:00+09:00'
+updated: '2020-11-24T15:00+09:00'
 draft: false
-category: 'Gatsby'
 tags: ['Gatsby', 'favicon', 'iPhone', 'manifest']
 ---
 

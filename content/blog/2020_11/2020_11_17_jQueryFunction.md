@@ -1,9 +1,8 @@
 ---
 title: 'function() と $(function(){})が混在する時の読み方'
-date: '2020-11-17'
-description: 'function() と $(function(){})が混在する時の読み方'
+published: '2020-11-17T15:00+09:00'
+updated: '2020-11-17T15:00+09:00'
 draft: false
-category: 'jQuery'
 tags: ['jQuery', 'HTML', 'JavaScript']
 ---
 

@@ -1,9 +1,8 @@
 ---
 title: 'MacBookでsimplenoteをSafariで使う'
-date: '2020-10-29'
-description: 'MacBookでsimplenoteをSafariで使う'
+published: '2020-10-29T15:00+09:00'
+updated: '2020-10-29T15:00+09:00'
 draft: false
-category: 'simplenote'
 tags: ['simplenote', 'blog']
 ---
 

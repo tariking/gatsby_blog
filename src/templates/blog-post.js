@@ -21,7 +21,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       />
       <article itemScope itemType="http://schema.org/Article">
         <header>
-          <div className="postdate">{post.frontmatter.date}</div>
+          <div className="postpublished">
+            投稿日 {post.frontmatter.published}
+          </div>
           <h1 itemProp="headline" className="posttitle">
             {post.frontmatter.title}
           </h1>
@@ -34,11 +36,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             ...scale(-1 / 5),
           }}
         />
-        {/* <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        /> */}
         <footer>{/* <Bio /> */}</footer>
       </article>
 
@@ -89,8 +86,7 @@ export const pageQuery = graphql`
       tableOfContents
       frontmatter {
         title
-        date(formatString: "YYYY/MM/DD")
-        description
+        published(formatString: "YYYY/MM/DD")
         tags
       }
     }

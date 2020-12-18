@@ -1,9 +1,9 @@
 ---
 title: 'PhotoShopのpsdファイルをGitで管理する'
-date: '2020-11-18'
-description: 'PhotoShopのpsdファイルをGitで管理する'
+published: '2020-11-18T15:00+09:00'
+
 draft: false
-category: 'datasahare'
+
 tags: ['datasahare', 'adobe', 'git', 'PhotoShop']
 ---
 

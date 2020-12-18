@@ -96,7 +96,7 @@ module.exports = {
             {
               allMarkdownRemark(
                 limit: 1000,
-                sort: {order: DESC, fields: [frontmatter___date]},
+                sort: {order: DESC, fields: [frontmatter___published]},
                 filter: {frontmatter: {draft: {eq: false}}}
               ) {
                 edges {
@@ -108,7 +108,7 @@ module.exports = {
                     }
                     frontmatter {
                       title
-                      date
+                      published
                     }
                   }
                 }

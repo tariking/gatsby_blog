@@ -1,9 +1,8 @@
 ---
 title: 'google-map-reactのマーカーの回転方法'
-date: '2020-11-14'
-description: 'google-map-reactのマーカーの回転方法'
+published: '2020-11-14T15:00+09:00'
+updated: '2020-11-14T15:00+09:00'
 draft: false
-category: 'google-map-react'
 tags: ['google-map-react', 'React', 'GoogleMap', 'marker']
 ---
 

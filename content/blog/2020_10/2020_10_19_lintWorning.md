@@ -1,9 +1,8 @@
 ---
 title: 'Lintにいろいろ怒られたので修正したときのメモ'
-date: '2020-10-19'
-description: 'Lintにいろいろ怒られたので修正したときのメモ'
+published: '2020-10-19T15:00+09:00'
+updated: '2020-10-19T15:00+09:00'
 draft: false
-category: 'Gatsby'
 tags: ['Gatsby', 'lint']
 ---
 

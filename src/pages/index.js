@@ -30,7 +30,7 @@ const BlogIndex = ({ data, location }) => {
                 </Link>
               </h4>
               <small>
-                {node.frontmatter.date}
+                {node.frontmatter.published}
                 <Tag tags={node.frontmatter.tags} index={true} />
               </small>
             </header>
@@ -67,7 +67,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { fields: [frontmatter___published], order: DESC }
       filter: { frontmatter: { draft: { eq: false } } }
     ) {
       edges {
@@ -77,9 +77,8 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "YYYY/MM/DD")
+            published(formatString: "YYYY/MM/DD")
             title
-            description
             tags
           }
         }
