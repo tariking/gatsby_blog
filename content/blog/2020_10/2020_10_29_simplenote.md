@@ -1,7 +1,7 @@
 ---
 title: 'MacBookでsimplenoteをSafariで使う'
 published: '2020-10-29T15:00+09:00'
-updated: '2020-10-29T15:00+09:00'
+updated: '2020-12-19T15:00+09:00'
 draft: false
 tags: ['simplenote', 'blog']
 ---
@@ -9,29 +9,37 @@ tags: ['simplenote', 'blog']
 ## simplenote を App でなくブラウザから使う
 
 業務で使っている借り物 Mac と、自分の Windows で最低限テキストのやり取りをしたかったので（そしてマークダウンが使えたらなおよい）、simplenote を使ってみることにしました。  
-Mac アプリケーションの simplenote は AppleID がないとインストール出来ないので、Mac 側はブラウザに限って使うものとする。
+Mac では、アプリインストールはせず、ブラウザで使うことを考えてみます。（と言いつつ、アプリは PWA なのでブラウザを使っている）
 
-## simplenote は Safari で使おう
+## simplenote をブラウザで使う場合の設定
 
-ServiceWoker を使用して通信しているので、解放しないと使えない。
+simplenote は ServiceWoker で処理しているので、ブラウザ側で使えるように設定する必要があります。
+ほとんどデフォルトで使えると思うけど、動かない場合は以下のフラグをチェック。
 
-Chrome で使えないときは
-コンソールに「Active service worker found, no need to register」と出た場合は以下
+- Chrome
 
-`chrome://flags/#enable-experimental-web-platform-features を有効にする`
+  chrome://flags の画面で experimental-web-platform-features を有効にし、ブラウザーを再起動
 
-（が、これを触らなくても WindowsPC は問題なく動いたので、複数条件があるのかも？）
+- Firefox
 
-Firefox は使えるけど日本語変換時に変換文字列と変換後文字列がダブってしまうので使いにくい。
+  about:config の画面で dom.serviceWorkers.enabled を true に設定し、ブラウザーを再起動
 
-safari はデフォルトで使用できた。
+  ※動作はするけど、入力文字変換で文字がダブってしまう。調査はしてない。
 
-## bag に気をつける
+- Edge
 
-というか、気をつけようがないけど、あまり安定したサービスではないようなので。
-simplenote で検索すると、「同期しなくなった」とか「新規作成できなくなった」とかが多い。  
-同期されないとかはどこかの端末にはあるんだろうからいいけど、削除された（アクセスできなくなった？）とかはまずい。  
-長年のメモを蓄積するより、アウトプットの素材として消費していく使い方のほうがいいんだろうか・・？
+  about:flags の画面で Enable service workers にチェックを入れ、ブラウザーを再起動
+
+- safari
+
+  (確認中)
+
+## simplenote は bag が多い？
+
+simplenote で検索すると、「同期しなくなった」とか「新規作成できなくなった」とかが目につく・・ように見える。  
+同期されないとかはどこかの端末にはあるんだろうからいいけど、削除された（アクセスできなくなった？）とかはまずい。
+
+長年のメモを蓄積するより、アウトプットの素材を消化していく使い方（アイデアのメモを取って、貯めない）とかになるんだろうか？
 
 ## 最終的な環境
 
@@ -40,7 +48,7 @@ simplenote でソースを共有するのはこちらのリストです。これ
 - Mac from Safari
 - Windows from Chrome(or App)
 - iPhone8
-- iPhone7+
+- iPhone
 - iPad
 
 ## 参考
