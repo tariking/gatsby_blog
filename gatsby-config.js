@@ -131,9 +131,9 @@ module.exports = {
     //         output: `rss.xml`,
     //         title: 'gg-box.com RSS Feed',
     //       },
-        ],
-      },
-    },
+    //    ],
+    //  },
+    //},
     'gatsby-plugin-sitemap',
     {
       resolve: `gatsby-plugin-manifest`,
