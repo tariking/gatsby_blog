@@ -88,52 +88,51 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    // `gatsby-plugin-feed`,
-    // {
-    //   resolve: `gatsby-plugin-feed`,
-    //   options: {
-    //     feeds: [
-    //       {
-    //         serialize: ({ query: { site, allMarkdownRemark } }) => {
-    //           return allMarkdownRemark.edges.map(edge => {
-    //             return Object.assign({}, edge.node.frontmatter, {
-    //               description: edge.node.excerpt,
-    //               date: edge.node.frontmatter.published,
-    //               url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-    //               guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-    //               custom_elements: [{ 'content:encoded': edge.node.html }],
-    //             })
-    //           })
-    //         },
-    //         query: `
-    //         {
-    //           allMarkdownRemark(
-    //             limit: 1000,
-    //             sort: {order: DESC, fields: [frontmatter___published]},
-    //             filter: {frontmatter: {draft: {eq: false}}}
-    //           ) {
-    //             edges {
-    //               node {
-    //                 excerpt
-    //                 html
-    //                 fields {
-    //                   slug
-    //                 }
-    //                 frontmatter {
-    //                   title
-    //                   published
-    //                 }
-    //               }
-    //             }
-    //           }
-    //         }
-    //         `,
-    //         output: `rss.xml`,
-    //         title: 'gg-box.com RSS Feed',
-    //       },
-    //    ],
-    //  },
-    //},
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  date: edge.node.frontmatter.published,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [{ 'content:encoded': edge.node.html }],
+                })
+              })
+            },
+            query: `
+            {
+              allMarkdownRemark(
+                limit: 1000,
+                sort: {order: DESC, fields: [frontmatter___published]},
+                filter: {frontmatter: {draft: {eq: false}}}
+              ) {
+                edges {
+                  node {
+                    excerpt
+                    html
+                    fields {
+                      slug
+                    }
+                    frontmatter {
+                      title
+                      published
+                    }
+                  }
+                }
+              }
+            }
+            `,
+            output: `rss.xml`,
+            title: 'gg-box.com RSS Feed',
+          },
+        ],
+      },
+    },
     'gatsby-plugin-sitemap',
     {
       resolve: `gatsby-plugin-manifest`,
