@@ -12,7 +12,7 @@ const NavBar = () => {
           <span className="navbar__img">
             <img src={GGB} alt="gg-box" className="ggbimg" />
           </span>
-          <span className="navbar__titletext">gg-box Blog&nbsp;&nbsp;</span>
+          <span className="navbar__titletext">gg-box&nbsp;&nbsp;</span>
           <span className="navbar__img">
             <img src={GGBG} alt="gg-box" className="ggbimg" />
           </span>

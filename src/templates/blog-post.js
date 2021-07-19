@@ -36,7 +36,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             ...scale(-1 / 5),
           }}
         />
-        <footer>{/* <Bio /> */}</footer>
       </article>
 
       <nav>
@@ -48,6 +47,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             listStyle: `none`,
             padding: 0,
             marginLeft: 0,
+            fontSize: 14,
           }}
         >
           <li>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import _ from 'lodash'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faTag } from '@fortawesome/free-solid-svg-icons'
 
@@ -17,7 +17,9 @@ const Tag = props => {
             key={index}
             className={props.index ? 'tag__listindex' : 'tag__list'}
           >
-            {/* <FontAwesomeIcon icon={faTag} /> */}#{tag}
+            <FontAwesomeIcon icon={faTag} style={{
+                  marginRight: 1.3,
+                }}/>{tag}
           </Link>
         )
       })}

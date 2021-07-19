@@ -6,6 +6,9 @@ theme.overrideThemeStyles = ({ rhythm }, options) => ({
     marginBottom: rhythm(1 / 2),
     marginTop: rhythm(2),
   },
+  h2: {
+    borderBottom: '1px solid #c0c0c0'
+  },
   a: {
     color: 'var(--textLink)',
   },
@@ -22,16 +25,16 @@ theme.overrideThemeStyles = ({ rhythm }, options) => ({
   },
 })
 
-theme.googleFonts = [
-  {
-    name: 'Noto+Sans+JP',
-    styles: ['400'],
-  },
-]
+theme.headerFontFamily = ['sans-serif']
+theme.bodyFontFamily = ['sans-serif']
 
-theme.headerFontFamily = ['Noto Sans JP']
-theme.bodyFontFamily = ['Noto Sans JP']
-
+// const theme = {
+//   baseFontSize: "16px",
+//   baseLineHeight: 1.75,
+//   scaleRatio: 2,
+//   headerFontFamily: ["sans-serif"],
+//   bodyFontFamily: ["sans-serif"],
+// }
 const typography = new Typography(theme)
 
 // Hot reload typography in development.

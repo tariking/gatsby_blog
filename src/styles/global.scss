@@ -1,6 +1,6 @@
 $default-color: #202428;
 $default-color-dark: rgba(255, 255, 255, 0.88);
-$bg-color: #f2f3f3;
+$bg-color: #f7f1f5;
 $link-color: #ff6588;
 $nav-head: #fff;
 $nav-head-dark: #18191a;
@@ -31,10 +31,9 @@ body {
   --textNormal: #202428;
   --textTitle: #202428;
   --textLink: $link-color;
-  --hr: hsla(0, 0%, 0%, 0.2);
+  --hr: hsla(0, 0%, 0%, 0.4);
   --navHead: #fff;
-  --navHeadBorder: #d6d6d6;
-
+  --navHeadBorder: #e7e7e7;
   background-color: var(--bg);
 }
 
@@ -45,15 +44,11 @@ body.dark {
   --textTitle: rgba(255, 255, 255, 0.88);
   --textLink: $link-color;
   --hr: hsla(0, 0%, 100%, 0.2);
-  --navHead: #242526;
-  --navHeadBorder: #242526;
+  --navHead: #272a2c;
+  --navHeadBorder: #7b3648;
 }
 
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   background-color: var(--navHead);
   height: 50px;
   border-bottom: 1px solid var(--navHeadBorder);
@@ -62,8 +57,7 @@ body.dark {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
-  z-index: 200;
+  width: 100%
 
   &__title {
     display: block;
@@ -76,7 +70,9 @@ body.dark {
 
   &__titletext {
     display: inline-block;
+    font-family: "Source Code Pro";
     line-height: 50px;
+    font-weight: 700;
   }
 
   &__ul {

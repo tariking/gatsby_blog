@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <footer>
-      © Copyright {new Date().getFullYear()} gg-box All rights reserved.
+      © 2021, Built with <a rel="external" href="https://www.gatsbyjs.org">Gatsby</a>
     </footer>
   )
 }

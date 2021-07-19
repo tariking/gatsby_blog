@@ -15,20 +15,24 @@ const TagsPage = ({ data, location }) => {
   return (
     <div>
       <Helmet title={siteTitle} />
-      <LayoutPage location={location} title={siteTitle} author={author}>
+      <LayoutPage
+        location={location}
+        title={siteTitle}
+        author={author}
+        >
         <SEO title="TagList" />
         <h1 itemProp="headline" className="pagetitle">
           all tag list
         </h1>
-        <ul>
+        <div className="tags">
           {group.map(tag => (
-            <li key={tag.fieldValue}>
+            <span key={tag.fieldValue} className="tags__item">
               <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                {tag.fieldValue} ({tag.totalCount})
+                {tag.fieldValue}:{tag.totalCount}
               </Link>
-            </li>
+            </span>
           ))}
-        </ul>
+        </div>
       </LayoutPage>
     </div>
   )

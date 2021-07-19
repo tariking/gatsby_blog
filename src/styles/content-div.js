@@ -5,30 +5,30 @@ export const contentStyle = {
   color: 'var(--textNormal)',
   transition: 'color 0.2s ease-out, background 0.2s ease-out',
   marginLeft: `auto`,
-  marginRight: `auto`,
-  marginTop: '50px',
+  marginRight: `28px`,
   maxWidth: rhythm(30),
-  paddingLeft: `${rhythm(3 / 4)}`,
+  paddingLeft: `${rhythm(4 / 4)}`,
   paddingRight: `${rhythm(3 / 4)}`,
   paddingTop: '0',
-  paddingBottom: `${rhythm(1.5)}`,
+  paddingBottom: '0',
 }
 
 export const postContentStyle = {
   backgroundColor: 'var(--navHead)',
   color: 'var(--textNormal)',
+  transition: 'color 0.2s ease-out, background 0.2s ease-out',
   marginLeft: `auto`,
-  //marginRight: `auto`,
-  marginTop: '50px',
-  maxWidth: rhythm(26),
-  paddingLeft: `${rhythm(3 / 4)}`,
+  marginRight: `30px`,
+  maxWidth: rhythm(30),
+  paddingLeft: `28px`,
   paddingRight: `${rhythm(3 / 4)}`,
   paddingTop: '0',
-  paddingBottom: `${rhythm(1.5)}`,
+  paddingBottom: '0',
 }
 
 export const postContentSideStyle = {
   backgroundColor: 'var(--bg)',
   marginRight: `auto`,
-  marginTop: '50px',
+  marginTop: '150px',
+  width: '198px',
 }

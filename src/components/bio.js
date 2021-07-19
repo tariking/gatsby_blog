@@ -56,11 +56,14 @@ const Bio = () => {
           borderRadius: `50%`,
         }}
       />
-      <p>
-        Written by <strong>{author.name}</strong> {author.summary}
-        {` `}
+      <p 
+        style={{
+          fontSize: 7
+        }}>
+        <strong>{author.name}: </strong> 睡眠大事
+        <br />
         <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
+          Twitter
         </a>
       </p>
     </div>

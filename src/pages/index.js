@@ -2,7 +2,6 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import { rhythm, scale } from '../utils/typography'
 
-// import Bio from '../components/bio'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Tag from '../components/tag'
@@ -14,7 +13,6 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title={siteTitle} />
-      {/* <Bio /> */}
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
@@ -22,7 +20,8 @@ const BlogIndex = ({ data, location }) => {
             <header style={{ paddingBottom: 0 }}>
               <h4
                 style={{
-                  marginBottom: rhythm(1 / 4),
+                  ...scale(0.3),
+                  marginBottom: rhythm(1 / 18),
                 }}
               >
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
