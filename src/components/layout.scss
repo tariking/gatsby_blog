@@ -24,16 +24,75 @@ header {
   }
 }
 
-@media screen and (max-width: 480px) {
+/* iPad Portrait */
+@media screen and (min-device-width: 481px) and (orientation:portrait) {
   .flexbox {
     -webkit-display: flex;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
   .main {
     margin: 0;
-    -webkit-flex: 10;
-    flex: 10;
+    min-width: 300px;
+    -webkit-flex: initial;
+    flex: initial;
+  }
+  .side {
+    display: none;
+  }
+}
+ 
+/* iPad Landscape */
+@media screen and (min-device-width: 481px) and (orientation:landscape) {
+  .flexbox {
+    -webkit-display: flex;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .main {
+    margin: 0;
+    min-width: 300px;
+    -webkit-flex: initial;
+    flex: initial;
+  }
+  .side {
+    -webkit-flex: 1;
+    flex: 1;
+    min-width: 0;
+    max-width: 160px;
+  }
+}
+
+/* iPhone Portrait */
+@media screen and (max-device-width: 480px) and (orientation:portrait) {
+  .flexbox {
+    -webkit-display: flex;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .main {
+    margin: 0;
+    min-width: 300px;
+    -webkit-flex: initial;
+    flex: initial;
+  }
+  .side {
+    display: none;
+  }
+} 
+ 
+/* iPhone Landscape横長 */
+@media screen and (max-device-width: 480px) and (orientation:landscape) {
+  .flexbox {
+    -webkit-display: flex;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .main {
+    margin: 0;
+    min-width: 667px;
+    -webkit-flex: initial;
+    flex: initial;
   }
   .side {
     display: none;
