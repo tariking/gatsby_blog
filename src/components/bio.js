@@ -61,7 +61,8 @@ const Bio = () => {
         style={{
           fontSize: 7
         }}>
-        <strong>{author.name}: </strong> 睡眠大事
+        <strong>{author.name}: </strong><br />
+          睡眠大事
         <br />
         <a href={`https://twitter.com/${social.twitter}`}>
           Twitter
