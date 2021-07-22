@@ -2,10 +2,11 @@ import React from 'react'
 import { Link } from 'gatsby'
 import _ from 'lodash'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
+import { config, library } from '@fortawesome/fontawesome-svg-core'
 import { faTag } from '@fortawesome/free-solid-svg-icons'
 
 const Tag = props => {
+  config.autoAddCss = false;
   library.add(faTag)
 
   return (
