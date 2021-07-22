@@ -11,10 +11,10 @@ tags: ['MacbookAir', 'M1', 'セットアップ']
 
 ざっくりこのような順番でまとめています。
 
-- システム環境設定とユーティリティ編 ← イマココ
-- Homebrew編
-- ターミナル編
-- 開発環境編
+- システム環境設定とユーティリティ編 ← いまここ
+- [Homebrew編](https://gg-box.com/2021_07/2021_07_12_macbook_setup_homebrew/)
+- [ターミナル編](https://gg-box.com/2021_07/2021_07_18_macbook_setup_tarminal/)
+- [開発環境編](https://gg-box.com/2021_07/2021_07_20_macbook_setup_dev/)
 
 ## システム環境設定
 

@@ -1,16 +1,16 @@
 ---
 title: 'M1 MacbookAirの初期セットアップ [Homebrew編]'
-published: '2021-07-18T15:00+09:00'
-updated: '2021-07-18T15:00+09:00'
+published: '2021-07-12T15:00+09:00'
+updated: '2021-07-12T15:00+09:00'
 draft: false
 tags: ['MacbookAir', 'M1', 'セットアップ']
 ---
 
 初期セットアップリンク
-- [システム環境設定とユーティリティ編](/2021_07_11_macbook_setup_init)
-- [Homebrew編]()
-- [ターミナル編]()
-- [開発環境編]()
+- [システム環境設定とユーティリティ編](https://gg-box.com/2021_07/2021_07_11_macbook_setup_init/)
+- Homebrew編 ← いまここ
+- [ターミナル編](https://gg-box.com/2021_07/2021_07_18_macbook_setup_tarminal/)
+- [開発環境編](https://gg-box.com/2021_07/2021_07_20_macbook_setup_dev/)
 
 ## Homebrew
 
